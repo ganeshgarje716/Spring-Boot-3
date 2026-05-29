@@ -1,5 +1,7 @@
 package com.ganesh;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -23,8 +25,12 @@ public class SpringBoot3Application implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		
 		
-		Book b1=new Book(1, "Java", 2300.00, 12);
-		bookRepository.save(b1);
+		
+		Book b2=new Book(4, "CSS", 2700.00, 118);
+		Book b3=new Book(5, "JS", 1500.00, 23);
+		Book b1=new Book(6, "React", 1200.00, 8);
+		
+		bookRepository.saveAll(List.of(b1,b2,b3));
 	}
 
 }
