@@ -68,9 +68,14 @@ public class SpringBoot3Application implements CommandLineRunner{
 		
 		//7
 		
-		Book b1=new Book(10, "OPPS with Exception", 1700.00, 8);
+//		Book b1=new Book(10, "OPPS with Exception", 1700.00, 8);
+//		
+//	    bookRepository.save(b1);
 		
-	    bookRepository.save(b1);
+		
+		//8
+		bookRepository.deleteById(1);
+
 		
 		
 		
