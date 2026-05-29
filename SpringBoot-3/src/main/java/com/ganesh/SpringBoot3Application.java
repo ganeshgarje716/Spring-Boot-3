@@ -79,7 +79,12 @@ public class SpringBoot3Application implements CommandLineRunner{
 		
 		
 		//9
-		bookRepository.deleteAllById(Arrays.asList(3,5));
+//		bookRepository.deleteAllById(Arrays.asList(3,5));
+		
+		
+		
+		//10
+		bookRepository.deleteAll();
 
 		
 		
