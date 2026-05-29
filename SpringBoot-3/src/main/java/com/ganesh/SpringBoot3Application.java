@@ -58,7 +58,10 @@ public class SpringBoot3Application implements CommandLineRunner{
 		
 		
 		//5
-		bookRepository.findAll().forEach(i->System.err.println(i));
+//		bookRepository.findAll().forEach(i->System.err.println(i));
+		
+		
+		System.err.println(bookRepository.existsById(1));
 		
 		
 		
