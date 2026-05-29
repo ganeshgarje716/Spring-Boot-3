@@ -1,5 +1,6 @@
 package com.ganesh;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -34,19 +35,36 @@ public class SpringBoot3Application implements CommandLineRunner{
 //		bookRepository.saveAll(List.of(b1,b2,b3));
 		
 		
+		
 //		System.out.println(bookRepository.count());
 		
 		
-		Optional<Book> b = bookRepository.findById(1);
 		
-		if (b.isPresent()) {
-			
-			System.err.println( b.get());
-		}
-		else {
-			
-			System.err.println("Book not available");
-		}
+//		Optional<Book> b = bookRepository.findById(1);
+//		
+//		if (b.isPresent()) {
+//			
+//			System.err.println( b.get());
+//		}
+//		else {
+//			
+//			System.err.println("Book not available");
+//		}
+		
+		
+		
+		bookRepository.findAllById(Arrays.asList(1,3,6)).forEach(i->System.err.println(i));
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	} 
 
 }
