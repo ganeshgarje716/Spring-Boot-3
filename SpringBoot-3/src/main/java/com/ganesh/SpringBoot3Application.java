@@ -27,6 +27,7 @@ public class SpringBoot3Application implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		
 		
+		//1
 		
 //		Book b2=new Book(7, "Angular", 2700.00, 18);
 //		Book b3=new Book(8, "Hibernate", 1500.00, 3);
@@ -35,11 +36,11 @@ public class SpringBoot3Application implements CommandLineRunner{
 //		bookRepository.saveAll(List.of(b1,b2,b3));
 		
 		
-		
+		//2
 //		System.out.println(bookRepository.count());
 		
 		
-		
+		//3
 //		Optional<Book> b = bookRepository.findById(1);
 //		
 //		if (b.isPresent()) {
@@ -52,8 +53,12 @@ public class SpringBoot3Application implements CommandLineRunner{
 //		}
 		
 		
+		//4
+//		bookRepository.findAllById(Arrays.asList(1,3,6)).forEach(i->System.err.println(i));
 		
-		bookRepository.findAllById(Arrays.asList(1,3,6)).forEach(i->System.err.println(i));
+		
+		//5
+		bookRepository.findAll().forEach(i->System.err.println(i));
 		
 		
 		
