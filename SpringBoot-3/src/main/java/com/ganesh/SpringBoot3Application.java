@@ -26,11 +26,14 @@ public class SpringBoot3Application implements CommandLineRunner{
 		
 		
 		
-		Book b2=new Book(4, "CSS", 2700.00, 118);
-		Book b3=new Book(5, "JS", 1500.00, 23);
-		Book b1=new Book(6, "React", 1200.00, 8);
+//		Book b2=new Book(7, "Angular", 2700.00, 18);
+//		Book b3=new Book(8, "Hibernate", 1500.00, 3);
+//		Book b1=new Book(9, "JDBC", 1200.00, 8);
+//		
+//		bookRepository.saveAll(List.of(b1,b2,b3));
 		
-		bookRepository.saveAll(List.of(b1,b2,b3));
-	}
+		
+		System.out.println(bookRepository.count());
+	} 
 
 }
