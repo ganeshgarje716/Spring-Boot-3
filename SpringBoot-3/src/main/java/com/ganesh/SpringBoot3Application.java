@@ -1,6 +1,7 @@
 package com.ganesh;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -33,7 +34,19 @@ public class SpringBoot3Application implements CommandLineRunner{
 //		bookRepository.saveAll(List.of(b1,b2,b3));
 		
 		
-		System.out.println(bookRepository.count());
+//		System.out.println(bookRepository.count());
+		
+		
+		Optional<Book> b = bookRepository.findById(1);
+		
+		if (b.isPresent()) {
+			
+			System.err.println( b.get());
+		}
+		else {
+			
+			System.err.println("Book not available");
+		}
 	} 
 
 }
