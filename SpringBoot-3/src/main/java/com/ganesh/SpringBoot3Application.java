@@ -61,8 +61,16 @@ public class SpringBoot3Application implements CommandLineRunner{
 //		bookRepository.findAll().forEach(i->System.err.println(i));
 		
 		
-		System.err.println(bookRepository.existsById(1));
+		//6
+//		System.err.println(bookRepository.existsById(1));
 		
+		
+		
+		//7
+		
+		Book b1=new Book(10, "OPPS with Exception", 1700.00, 8);
+		
+	    bookRepository.save(b1);
 		
 		
 		
