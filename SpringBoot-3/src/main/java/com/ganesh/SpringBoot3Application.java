@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.ganesh.Repository.BookRepository;
+import com.ganesh.entity.Book;
 
 @SpringBootApplication
 public class SpringBoot3Application implements CommandLineRunner{
@@ -22,6 +23,8 @@ public class SpringBoot3Application implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		
 		
+		Book b1=new Book(1, "Java", 2300.00, 12);
+		bookRepository.save(b1);
 	}
 
 }
